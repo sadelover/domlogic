@@ -1,0 +1,524 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="BEOPDataEngineCore">
+      <UniqueIdentifier>{d7fa5f3a-a1e7-455a-80d3-6332144ac70e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataEngineConfig">
+      <UniqueIdentifier>{40d771a7-1123-48e9-b77e-2c1db254f33f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ServerDataAccess">
+      <UniqueIdentifier>{45c91911-8938-4829-96d0-16b9ac271f01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BEOPDataPoint">
+      <UniqueIdentifier>{043466a8-564e-414b-abe3-7849ceec3de5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools">
+      <UniqueIdentifier>{a747d5a3-3c35-4daf-9fd2-04ac8dc9de79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LAN_WANComm">
+      <UniqueIdentifier>{9c13069e-a0ec-4a88-9153-79e9159bfc9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataEngineConfig\DB_BasicIO">
+      <UniqueIdentifier>{48297aa0-1a3d-4795-a1c8-6a3a9926b8b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BEOPDataEngineCore\json">
+      <UniqueIdentifier>{5819e98d-39ed-47e5-8495-752ff531b1a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="redis">
+      <UniqueIdentifier>{539ef16f-5c23-4628-8125-4fdd8b8b6bde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Http">
+      <UniqueIdentifier>{0d84ef9e-4c4c-4b93-ab54-2f77dbb92bc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Json">
+      <UniqueIdentifier>{2339486a-5183-4982-8c36-98f9c4b12ea8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="..\DB_BasicIO\ReadMe.txt">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </None>
+    <None Include="..\BEOPDataEngineCore\json\json_valueiterator.inl">
+      <Filter>BEOPDataEngineCore\json</Filter>
+    </None>
+    <None Include="..\json\json_valueiterator.inl">
+      <Filter>Json</Filter>
+    </None>
+    <None Include="..\version.json">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\BEOPDataEngineCore\BEOPLogicManager.h">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\DataBaseSetting.h">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\DLLObject.h">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\EngineRegister.h">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\LogicBase.h">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\LogicDllThread.h">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\LogicParameter.h">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\LogicParameterConst.h">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\LogicParameterLink.h">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\LogicParameterPoint.h">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\LogicPipeline.h">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\RedundencyManager.h">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DataEngineConfig\CDataEngineAppConfig.h">
+      <Filter>DataEngineConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DB_BasicIO\ExportDataAccess.h">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DB_BasicIO\WarningEntry.h">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DB_BasicIO\RealTimeDataAccess.h">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DB_BasicIO\TableAnalyzer.h">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DB_BasicIO\WarningConfigItem.h">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DB_BasicIO\BEOPDataBaseInfo.h">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DB_BasicIO\DatabaseSession.h">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DB_BasicIO\DBAccessContainer.h">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DB_BasicIO\DBInterfaceExp.h">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DB_BasicIO\DBInterfaceImp.h">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DB_BasicIO\DllDefine.h">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DB_BasicIO\MysqlDeleter.h">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DB_BasicIO\RunningRecordOperation.h">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerDataAccess\BEOPDataAccessBase.h">
+      <Filter>ServerDataAccess</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerDataAccess\BEOPDataAccess.h">
+      <Filter>ServerDataAccess</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataPoint\sqlite\SqliteRW.h">
+      <Filter>BEOPDataPoint</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataPoint\DataPointEntry.h">
+      <Filter>BEOPDataPoint</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataPoint\DataPointManager.h">
+      <Filter>BEOPDataPoint</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataPoint\sqlite\ParseStringParam3.h">
+      <Filter>BEOPDataPoint</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataPoint\sqlite\sqlite3.h">
+      <Filter>BEOPDataPoint</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataPoint\sqlite\sqlite3ext.h">
+      <Filter>BEOPDataPoint</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataPoint\sqlite\SqliteAcess.h">
+      <Filter>BEOPDataPoint</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\Util\UtilString.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\CustomTools\CustomTools.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\DllDefine.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\Maths\MathCalcs.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\Maths\MathDefines.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\NormalDefines.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\Operation_Define.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\Scope_Ptr.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\StringDef.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\USingletonTemplate.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\Util\UtilsFile.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LAN_WANComm\DatasHandle.h">
+      <Filter>LAN_WANComm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LAN_WANComm\UpperMachineComm.h">
+      <Filter>LAN_WANComm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LAN_WANComm\Definition.h">
+      <Filter>LAN_WANComm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LAN_WANComm\Tools\IocpComm\IocpBuffer.h">
+      <Filter>LAN_WANComm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LAN_WANComm\IocpClient.h">
+      <Filter>LAN_WANComm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LAN_WANComm\Tools\IocpComm\Iocps.h">
+      <Filter>LAN_WANComm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LAN_WANComm\Tools\IocpComm\MyClientIocp.h">
+      <Filter>LAN_WANComm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LAN_WANComm\Tools\NetComm\NetComm.h">
+      <Filter>LAN_WANComm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LAN_WANComm\Tools\NetComm\NetCommBase.h">
+      <Filter>LAN_WANComm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LAN_WANComm\NetworkComm.h">
+      <Filter>LAN_WANComm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LAN_WANComm\Tools\ToolsFunction\PingIcmp.h">
+      <Filter>LAN_WANComm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LAN_WANComm\Tools\ToolsFunction\PopWindowDlg.h">
+      <Filter>LAN_WANComm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LAN_WANComm\Tools\ToolsFunction\ToolsFunction.h">
+      <Filter>LAN_WANComm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\Zip\unzip.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\Zip\zip.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\EngineInfoDefine.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\ErrorCodeDefine.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\StructDefine.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\ScheduleThread.h">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\BEOPDataEngineCore.h">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\json\autolink.h">
+      <Filter>BEOPDataEngineCore\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\json\config.h">
+      <Filter>BEOPDataEngineCore\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\json\features.h">
+      <Filter>BEOPDataEngineCore\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\json\forwards.h">
+      <Filter>BEOPDataEngineCore\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\json\json.h">
+      <Filter>BEOPDataEngineCore\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\json\json_batchallocator.h">
+      <Filter>BEOPDataEngineCore\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\json\reader.h">
+      <Filter>BEOPDataEngineCore\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\json\value.h">
+      <Filter>BEOPDataEngineCore\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\json\writer.h">
+      <Filter>BEOPDataEngineCore\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DB_BasicIO\Env.h">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\redis\async.h">
+      <Filter>redis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\redis\config.h">
+      <Filter>redis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\redis\dict.h">
+      <Filter>redis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\redis\fmacros.h">
+      <Filter>redis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\redis\hiredis.h">
+      <Filter>redis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\redis\net.h">
+      <Filter>redis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\redis\sds.h">
+      <Filter>redis</Filter>
+    </ClInclude>
+    <ClInclude Include="RedisManager.h" />
+    <ClInclude Include="..\Http\HttpOperation.h">
+      <Filter>Http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\autolink.h">
+      <Filter>Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\config.h">
+      <Filter>Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\features.h">
+      <Filter>Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\forwards.h">
+      <Filter>Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\json.h">
+      <Filter>Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\json_batchallocator.h">
+      <Filter>Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\reader.h">
+      <Filter>Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\value.h">
+      <Filter>Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\writer.h">
+      <Filter>Json</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BEOPGatewayCore.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreFileTransfer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\BEOPLogicManager.cpp">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\DataBaseSetting.cpp">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\DLLObject.cpp">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\EngineRegister.cpp">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\LogicDllThread.cpp">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\LogicParameter.cpp">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\LogicParameterConst.cpp">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\LogicParameterLink.cpp">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\LogicParameterPoint.cpp">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\LogicPipeline.cpp">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\RedundencyManager.cpp">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DataEngineConfig\CDataEngineAppConfig.cpp">
+      <Filter>DataEngineConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DB_BasicIO\DatabaseSession.cpp">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DB_BasicIO\DBAccessContainer.cpp">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DB_BasicIO\RunningRecordOperation.cpp">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DB_BasicIO\RealTimeDataAccess.cpp">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DB_BasicIO\TableAnalyzer.cpp">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DB_BasicIO\WarningConfigItem.cpp">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DB_BasicIO\WarningEntry.cpp">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DB_BasicIO\ExportDataAccess.cpp">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ServerDataAccess\BEOPDataAccess.cpp">
+      <Filter>ServerDataAccess</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataPoint\DataPointEntry.cpp">
+      <Filter>BEOPDataPoint</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataPoint\DataPointManager.cpp">
+      <Filter>BEOPDataPoint</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataPoint\sqlite\ParseStringParam3.cpp">
+      <Filter>BEOPDataPoint</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataPoint\sqlite\SqliteAcess.cpp">
+      <Filter>BEOPDataPoint</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataPoint\sqlite\SqliteRW.cpp">
+      <Filter>BEOPDataPoint</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tools\Util\UtilString.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tools\Util\UtilsFile.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LAN_WANComm\DatasHandle.cpp">
+      <Filter>LAN_WANComm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LAN_WANComm\UpperMachineComm.cpp">
+      <Filter>LAN_WANComm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LAN_WANComm\Tools\IocpComm\IocpBuffer.cpp">
+      <Filter>LAN_WANComm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LAN_WANComm\IocpClient.cpp">
+      <Filter>LAN_WANComm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LAN_WANComm\Tools\IocpComm\Iocps.cpp">
+      <Filter>LAN_WANComm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LAN_WANComm\Tools\IocpComm\MyClientIocp.cpp">
+      <Filter>LAN_WANComm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LAN_WANComm\Tools\NetComm\NetComm.cpp">
+      <Filter>LAN_WANComm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LAN_WANComm\Tools\NetComm\NetCommBase.cpp">
+      <Filter>LAN_WANComm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LAN_WANComm\NetworkComm.cpp">
+      <Filter>LAN_WANComm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LAN_WANComm\Tools\ToolsFunction\PingIcmp.cpp">
+      <Filter>LAN_WANComm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LAN_WANComm\Tools\ToolsFunction\PopWindowDlg.cpp">
+      <Filter>LAN_WANComm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LAN_WANComm\Tools\ToolsFunction\ToolsFunction.cpp">
+      <Filter>LAN_WANComm</Filter>
+    </ClCompile>
+    <ClCompile Include="BeopGatewayCoreWrapper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreUnitTest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tools\Zip\unzip.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tools\Zip\zip.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\ScheduleThread.cpp">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\BEOPDataEngineCore.cpp">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\json\json_reader.cpp">
+      <Filter>BEOPDataEngineCore\json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\json\json_value.cpp">
+      <Filter>BEOPDataEngineCore\json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\json\json_writer.cpp">
+      <Filter>BEOPDataEngineCore\json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DB_BasicIO\Env.cpp">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClCompile>
+    <ClCompile Include="RedisManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Http\HttpOperation.cpp">
+      <Filter>Http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\json\json_reader.cpp">
+      <Filter>Json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\json\json_value.cpp">
+      <Filter>Json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\json\json_writer.cpp">
+      <Filter>Json</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BEOPGatewayCore.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

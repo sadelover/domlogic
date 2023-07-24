@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{ED667548-96FA-4C79-BB93-2E788BE4B855}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>BEOPGatewayCore</RootNamespace>
+    <ProjectName>domlogic</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)\bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\obj\$(ProjectName)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)03</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)\bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\obj\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;BCCWIN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\include;$(SolutionDir);$(SolutionDir)\bacnet\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>hiredis.lib;Toolsd.lib;libmysql.lib;sqlite3.lib;ws2_32.lib;iphlpapi.lib;libnodave.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\bin\$(Configuration);$(SolutionDir)lib</AdditionalLibraryDirectories>
+      <UACExecutionLevel>AsInvoker</UACExecutionLevel>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;BCCWIN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\include;$(SolutionDir);$(SolutionDir)\bacnet\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>hiredis.lib;libmysql.lib;Tools.lib;sqlite3.lib;ws2_32.lib;iphlpapi.lib;libnodave.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\bin\$(Configuration);$(SolutionDir)lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\BEOPDataEngineCore\json\json_valueiterator.inl" />
+    <None Include="..\DB_BasicIO\ReadMe.txt" />
+    <None Include="..\json\json_valueiterator.inl" />
+    <None Include="..\version.json" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\BEOPDataEngineCore\BEOPDataEngineCore.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\BEOPLogicManager.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\DataBaseSetting.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\DLLObject.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\EngineRegister.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\json\autolink.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\json\config.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\json\features.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\json\forwards.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\json\json.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\json\json_batchallocator.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\json\reader.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\json\value.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\json\writer.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\LogicBase.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\LogicDllThread.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\LogicParameter.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\LogicParameterConst.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\LogicParameterLink.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\LogicParameterPoint.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\LogicPipeline.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\RedundencyManager.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\ScheduleThread.h" />
+    <ClInclude Include="..\BEOPDataPoint\DataPointEntry.h" />
+    <ClInclude Include="..\BEOPDataPoint\DataPointManager.h" />
+    <ClInclude Include="..\BEOPDataPoint\sqlite\ParseStringParam3.h" />
+    <ClInclude Include="..\BEOPDataPoint\sqlite\sqlite3.h" />
+    <ClInclude Include="..\BEOPDataPoint\sqlite\sqlite3ext.h" />
+    <ClInclude Include="..\BEOPDataPoint\sqlite\SqliteAcess.h" />
+    <ClInclude Include="..\BEOPDataPoint\sqlite\SqliteRW.h" />
+    <ClInclude Include="..\DataEngineConfig\CDataEngineAppConfig.h" />
+    <ClInclude Include="..\DB_BasicIO\BEOPDataBaseInfo.h" />
+    <ClInclude Include="..\DB_BasicIO\DatabaseSession.h" />
+    <ClInclude Include="..\DB_BasicIO\DBAccessContainer.h" />
+    <ClInclude Include="..\DB_BasicIO\DBInterfaceExp.h" />
+    <ClInclude Include="..\DB_BasicIO\DBInterfaceImp.h" />
+    <ClInclude Include="..\DB_BasicIO\DllDefine.h" />
+    <ClInclude Include="..\DB_BasicIO\Env.h" />
+    <ClInclude Include="..\DB_BasicIO\ExportDataAccess.h" />
+    <ClInclude Include="..\DB_BasicIO\MysqlDeleter.h" />
+    <ClInclude Include="..\DB_BasicIO\RealTimeDataAccess.h" />
+    <ClInclude Include="..\DB_BasicIO\RunningRecordOperation.h" />
+    <ClInclude Include="..\DB_BasicIO\TableAnalyzer.h" />
+    <ClInclude Include="..\DB_BasicIO\WarningConfigItem.h" />
+    <ClInclude Include="..\DB_BasicIO\WarningEntry.h" />
+    <ClInclude Include="..\Http\HttpOperation.h" />
+    <ClInclude Include="..\json\autolink.h" />
+    <ClInclude Include="..\json\config.h" />
+    <ClInclude Include="..\json\features.h" />
+    <ClInclude Include="..\json\forwards.h" />
+    <ClInclude Include="..\json\json.h" />
+    <ClInclude Include="..\json\json_batchallocator.h" />
+    <ClInclude Include="..\json\reader.h" />
+    <ClInclude Include="..\json\value.h" />
+    <ClInclude Include="..\json\writer.h" />
+    <ClInclude Include="..\LAN_WANComm\DatasHandle.h" />
+    <ClInclude Include="..\LAN_WANComm\Definition.h" />
+    <ClInclude Include="..\LAN_WANComm\IocpClient.h" />
+    <ClInclude Include="..\LAN_WANComm\NetworkComm.h" />
+    <ClInclude Include="..\LAN_WANComm\Tools\IocpComm\IocpBuffer.h" />
+    <ClInclude Include="..\LAN_WANComm\Tools\IocpComm\Iocps.h" />
+    <ClInclude Include="..\LAN_WANComm\Tools\IocpComm\MyClientIocp.h" />
+    <ClInclude Include="..\LAN_WANComm\Tools\NetComm\NetComm.h" />
+    <ClInclude Include="..\LAN_WANComm\Tools\NetComm\NetCommBase.h" />
+    <ClInclude Include="..\LAN_WANComm\Tools\ToolsFunction\PingIcmp.h" />
+    <ClInclude Include="..\LAN_WANComm\Tools\ToolsFunction\PopWindowDlg.h" />
+    <ClInclude Include="..\LAN_WANComm\Tools\ToolsFunction\ToolsFunction.h" />
+    <ClInclude Include="..\LAN_WANComm\UpperMachineComm.h" />
+    <ClInclude Include="..\redis\async.h" />
+    <ClInclude Include="..\redis\config.h" />
+    <ClInclude Include="..\redis\dict.h" />
+    <ClInclude Include="..\redis\fmacros.h" />
+    <ClInclude Include="..\redis\hiredis.h" />
+    <ClInclude Include="..\redis\net.h" />
+    <ClInclude Include="..\redis\sds.h" />
+    <ClInclude Include="..\ServerDataAccess\BEOPDataAccess.h" />
+    <ClInclude Include="..\ServerDataAccess\BEOPDataAccessBase.h" />
+    <ClInclude Include="..\Tools\CustomTools\CustomTools.h" />
+    <ClInclude Include="..\Tools\DllDefine.h" />
+    <ClInclude Include="..\Tools\EngineInfoDefine.h" />
+    <ClInclude Include="..\Tools\ErrorCodeDefine.h" />
+    <ClInclude Include="..\Tools\Maths\MathCalcs.h" />
+    <ClInclude Include="..\Tools\Maths\MathDefines.h" />
+    <ClInclude Include="..\Tools\NormalDefines.h" />
+    <ClInclude Include="..\Tools\Operation_Define.h" />
+    <ClInclude Include="..\Tools\Scope_Ptr.h" />
+    <ClInclude Include="..\Tools\StringDef.h" />
+    <ClInclude Include="..\Tools\StructDefine.h" />
+    <ClInclude Include="..\Tools\USingletonTemplate.h" />
+    <ClInclude Include="..\Tools\Util\UtilsFile.h" />
+    <ClInclude Include="..\Tools\Util\UtilString.h" />
+    <ClInclude Include="..\Tools\Zip\unzip.h" />
+    <ClInclude Include="..\Tools\Zip\zip.h" />
+    <ClInclude Include="RedisManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\BEOPDataEngineCore\BEOPDataEngineCore.cpp" />
+    <ClCompile Include="..\BEOPDataEngineCore\BEOPLogicManager.cpp" />
+    <ClCompile Include="..\BEOPDataEngineCore\DataBaseSetting.cpp" />
+    <ClCompile Include="..\BEOPDataEngineCore\DLLObject.cpp" />
+    <ClCompile Include="..\BEOPDataEngineCore\EngineRegister.cpp" />
+    <ClCompile Include="..\BEOPDataEngineCore\json\json_reader.cpp" />
+    <ClCompile Include="..\BEOPDataEngineCore\json\json_value.cpp" />
+    <ClCompile Include="..\BEOPDataEngineCore\json\json_writer.cpp" />
+    <ClCompile Include="..\BEOPDataEngineCore\LogicDllThread.cpp" />
+    <ClCompile Include="..\BEOPDataEngineCore\LogicParameter.cpp" />
+    <ClCompile Include="..\BEOPDataEngineCore\LogicParameterConst.cpp" />
+    <ClCompile Include="..\BEOPDataEngineCore\LogicParameterLink.cpp" />
+    <ClCompile Include="..\BEOPDataEngineCore\LogicParameterPoint.cpp" />
+    <ClCompile Include="..\BEOPDataEngineCore\LogicPipeline.cpp" />
+    <ClCompile Include="..\BEOPDataEngineCore\RedundencyManager.cpp" />
+    <ClCompile Include="..\BEOPDataEngineCore\ScheduleThread.cpp" />
+    <ClCompile Include="..\BEOPDataPoint\DataPointEntry.cpp" />
+    <ClCompile Include="..\BEOPDataPoint\DataPointManager.cpp" />
+    <ClCompile Include="..\BEOPDataPoint\sqlite\ParseStringParam3.cpp" />
+    <ClCompile Include="..\BEOPDataPoint\sqlite\SqliteAcess.cpp" />
+    <ClCompile Include="..\BEOPDataPoint\sqlite\SqliteRW.cpp" />
+    <ClCompile Include="..\DataEngineConfig\CDataEngineAppConfig.cpp" />
+    <ClCompile Include="..\DB_BasicIO\DatabaseSession.cpp" />
+    <ClCompile Include="..\DB_BasicIO\DBAccessContainer.cpp" />
+    <ClCompile Include="..\DB_BasicIO\Env.cpp" />
+    <ClCompile Include="..\DB_BasicIO\ExportDataAccess.cpp" />
+    <ClCompile Include="..\DB_BasicIO\RealTimeDataAccess.cpp" />
+    <ClCompile Include="..\DB_BasicIO\RunningRecordOperation.cpp" />
+    <ClCompile Include="..\DB_BasicIO\TableAnalyzer.cpp" />
+    <ClCompile Include="..\DB_BasicIO\WarningConfigItem.cpp" />
+    <ClCompile Include="..\DB_BasicIO\WarningEntry.cpp" />
+    <ClCompile Include="..\Http\HttpOperation.cpp" />
+    <ClCompile Include="..\json\json_reader.cpp" />
+    <ClCompile Include="..\json\json_value.cpp" />
+    <ClCompile Include="..\json\json_writer.cpp" />
+    <ClCompile Include="..\LAN_WANComm\DatasHandle.cpp" />
+    <ClCompile Include="..\LAN_WANComm\IocpClient.cpp" />
+    <ClCompile Include="..\LAN_WANComm\NetworkComm.cpp" />
+    <ClCompile Include="..\LAN_WANComm\Tools\IocpComm\IocpBuffer.cpp" />
+    <ClCompile Include="..\LAN_WANComm\Tools\IocpComm\Iocps.cpp" />
+    <ClCompile Include="..\LAN_WANComm\Tools\IocpComm\MyClientIocp.cpp" />
+    <ClCompile Include="..\LAN_WANComm\Tools\NetComm\NetComm.cpp" />
+    <ClCompile Include="..\LAN_WANComm\Tools\NetComm\NetCommBase.cpp" />
+    <ClCompile Include="..\LAN_WANComm\Tools\ToolsFunction\PingIcmp.cpp" />
+    <ClCompile Include="..\LAN_WANComm\Tools\ToolsFunction\PopWindowDlg.cpp" />
+    <ClCompile Include="..\LAN_WANComm\Tools\ToolsFunction\ToolsFunction.cpp" />
+    <ClCompile Include="..\LAN_WANComm\UpperMachineComm.cpp" />
+    <ClCompile Include="..\ServerDataAccess\BEOPDataAccess.cpp" />
+    <ClCompile Include="..\Tools\Util\UtilsFile.cpp" />
+    <ClCompile Include="..\Tools\Util\UtilString.cpp" />
+    <ClCompile Include="..\Tools\Zip\unzip.cpp" />
+    <ClCompile Include="..\Tools\Zip\zip.cpp" />
+    <ClCompile Include="BEOPGatewayCore.cpp" />
+    <ClCompile Include="BeopGatewayCoreWrapper.cpp" />
+    <ClCompile Include="CoreFileTransfer.cpp" />
+    <ClCompile Include="CoreUnitTest.cpp" />
+    <ClCompile Include="RedisManager.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BEOPGatewayCore.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="BEOPGatewayCore.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

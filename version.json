@@ -1,0 +1,17 @@
+{
+    "data":
+    [
+	  {"2.6.1": "重大升级：解决内存泄漏问题，定时UdpateProcessStatus时有个mysql查询没有用Project::Tools::scope_ptr_holder<MYSQL_RES, Mysql_Result_Deleter> 释放"},
+	  {"2.6.2":"调整日志锁，防止等待过长"},
+	  {"2.6.3":"增加oprecord对m_nLogicLogLevel的支持，小于0时不记录"},
+	  {"2.6.4":"Connect Mysql RealTime DB Fail！弹框不阻塞"},
+      {"2.6.5": "加回日志锁"} ,
+      {"2.6.6": "模式设定的外部点变量支持: dom_system_mode_setting_of_sys0"} ,
+      {"2.6.7": "模式设定的外部点变量支持改进"}  ,
+      {"2.6.8": "domlogic增加版本号"}   ,
+      {"2.7.1": "domlogic设置为无窗口运行"}   ,
+      {"2.7.2": "点名绑定模式时间的偶尔读取实时数据失败导致不执行bug修复"}    ,
+      {"2.7.3": "增加初始化时的日志"}     ,
+      {"2.7.4": "增加初始化时的时间记录便于统计程序连续运行时间"} 
+    ]
+}
